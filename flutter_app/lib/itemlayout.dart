@@ -65,6 +65,47 @@ class ItemLayout extends StatelessWidget {
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Text('${list[index]['name']}',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Text('${list[index]['food_name']}'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Text('${list[index]['price']}'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Text('${list[index]['time']}',
+                      style: TextStyle(color: Colors.red)),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 50),
+            height: 30,
+            width: 30,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              color: Colors.lightGreen[800],
+            ),
+            alignment: Alignment.center,
+            child: Text(
+              '${list[index]['ratings']}',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
         ],
       ),
     );
