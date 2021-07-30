@@ -59,8 +59,29 @@ class _HomePageState extends State<HomePage> {
                           children: <Widget>[
                             ItemLayout(),
                             SizedBox(
-                              height: 100,
+                              height: 10,
                             ),
+                            ItemLayout(),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            ItemLayout(),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            ItemLayout(),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            ItemLayout(),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            ItemLayout(),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            ItemLayout(),
                           ],
                         ),
                       ),

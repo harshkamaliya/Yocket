@@ -28,23 +28,23 @@ import 'package:flutter/material.dart';
 // }
 
 class ItemLayout extends StatelessWidget {
-  int id;
-  String title;
-  String image;
-  double rating;
-  String foodName;
-  int priceLevel;
-  int time;
-  const ItemLayout({
-    Key? key,
-    required this.id,
-    required this.title,
-    required this.image,
-    required this.rating,
-    required this.foodName,
-    required this.priceLevel,
-    required this.time,
-  }) : super(key: key);
+  // int id;
+  // String title;
+  // String image;
+  // double rating;
+  // String foodName;
+  // int priceLevel;
+  // int time;
+  // const ItemLayout({
+  //   Key? key,
+  //   required this.id,
+  //   required this.title,
+  //   required this.image,
+  //   required this.rating,
+  //   required this.foodName,
+  //   required this.priceLevel,
+  //   required this.time,
+  // }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -52,14 +52,15 @@ class ItemLayout extends StatelessWidget {
       child: Row(
         children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(10.0),
             child: Container(
               height: 80,
               width: 80,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
-                  image: NetworkImage('${list[index]['image']}'),
+                  image: NetworkImage(
+                      'https://img.freepik.com/free-photo/top-view-fast-food-mix-hamburger-doner-sandwich-chicken-nuggets-rice-vegetable-salad-chicken-sticks-caesar-salad-mushrooms-pizza-chicken-ragout-french-fries-mayo_141793-3997.jpg?size=626&ext=jpg'),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -72,22 +73,21 @@ class ItemLayout extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(2.0),
-                  child: Text('${list[index]['name']}',
+                  child: Text('Mayflower Park',
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(2.0),
-                  child: Text('${list[index]['food_name']}'),
+                  child: Text('emma barrera'),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(2.0),
-                  child: Text('${list[index]['price']}'),
+                  child: Text('2000'),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(2.0),
-                  child: Text('${list[index]['time']}',
-                      style: TextStyle(color: Colors.red)),
+                  child: Text('10 pm', style: TextStyle(color: Colors.red)),
                 ),
               ],
             ),
@@ -102,7 +102,7 @@ class ItemLayout extends StatelessWidget {
             ),
             alignment: Alignment.center,
             child: Text(
-              '${list[index]['ratings']}',
+              '4.5',
               style: TextStyle(color: Colors.white),
             ),
           ),
